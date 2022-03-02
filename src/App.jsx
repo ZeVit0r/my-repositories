@@ -28,7 +28,7 @@ export function App() {
 
     useEffect(()=>{
         setShowRepositories(repositories.filter((repo)=>{
-            return repo.name.indexOf(search) != -1
+            return repo.name.toUpperCase().indexOf(search.toUpperCase()) != -1
             
         }))
         
