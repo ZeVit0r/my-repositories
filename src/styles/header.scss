@@ -1,0 +1,42 @@
+header {
+    height: 140px;
+    background-color: #20CC76;
+
+    .principal-header {
+        display: flex;
+        flex-direction: column;
+        
+        justify-content: center;
+        align-items: center;
+
+        .logo-principal {
+            height: 140px;
+            width: 140px;
+        }
+
+        .logo-secundary {
+            margin-top: -15px;
+        }
+    }
+
+    .container-icons {
+        width: 140px;
+        position: absolute;
+        right: 10px;
+        top: 10px;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+    
+}
