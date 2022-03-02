@@ -1,0 +1,14 @@
+.btnUrl {
+    width: 15%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: 0.4s;
+}
+
+.btnUrl:hover {
+    opacity: 0.7;
+    transition: 0.4s;
+}

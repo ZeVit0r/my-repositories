@@ -2,6 +2,8 @@ import React from 'react'
 
 import './styles.scss'
 
+import { Button } from '../Button'
+
 export function RepositoryItem(props) {
     return(
         <div className="container-item">
@@ -10,10 +12,12 @@ export function RepositoryItem(props) {
                 <p className="description-repository">Description: {props.description ? props.description : 'without description...'}</p>
                 <p className="language-repository"><b>{props.language}</b></p>
             </div>
+            
             <div className="owner">
                 <p className="owner-name"><b>Owner:</b> {props.owner}</p>
                 <a 
                     href={props.ownerUrl}
+                    target="_blank"
                     >
                     <img 
                         src={props.ownerImg} 
@@ -23,7 +27,7 @@ export function RepositoryItem(props) {
                 </a>
             </div>
 
-            <button></button>
+            <Button repoUrl={props.repoUrl}></Button>
         </div>
     )
 }

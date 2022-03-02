@@ -28,11 +28,48 @@ header {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+
+        .icons{
+            transition: 0.7s;
+        }
+
+        .icons:hover {
+            transition: 0.7s;
+            opacity: 0.8;
+        }
+
     }
 
 }
 
 main {
+    input {
+        margin-top: 40px;
+        margin-bottom: 20px;
+
+        padding: 4px;
+
+        border: 0;
+
+        background-color: #f8f8f8;
+        color: #20CC76;
+
+        font-weight: 700;
+
+        width: 500px;
+        height: 30px;
+    }
+
+    input::placeholder {
+        color: #20CC76;
+        opacity: 0.8;
+    }
+
+    input::placeholder {
+        color: #20CC76;
+        opacity: 0.8;
+    }    
+
     display: flex;
     flex-direction: column;
 
