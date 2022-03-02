@@ -29,7 +29,7 @@ header {
         flex-direction: row;
         justify-content: space-between;
 
-        .icons{
+        .icons {
             transition: 0.7s;
         }
 
@@ -38,6 +38,15 @@ header {
             opacity: 0.8;
         }
 
+    }
+
+    @media (max-width: 630px){
+        .container-icons {
+            width: 80px;
+            .icons {
+                height: 20px;
+            }
+        }
     }
 
 }
@@ -68,7 +77,13 @@ main {
     input::placeholder {
         color: #20CC76;
         opacity: 0.8;
-    }    
+    }
+    @media (max-width: 630px){
+       input {
+            width: 280px;
+        }
+    }
+    
 
     display: flex;
     flex-direction: column;

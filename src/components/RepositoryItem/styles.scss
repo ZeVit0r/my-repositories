@@ -80,10 +80,23 @@
 
     }
 
-    button {
-        background-color: #a34d74;
-        width: 15%;
-        height: 90%;
-
-    }
 }
+@media (max-width: 630px){
+    .container-item {
+        width: 300px;
+        height: 100px;
+
+        .informations {
+            width: 80%;
+            height: 90%;
+        }
+
+        .owner {
+            display: none;
+        }
+
+        button {
+
+        }
+     }
+ }
