@@ -1,10 +1,19 @@
-import React from 'react'
+interface RepositoryItemProps {
+    key: string;
+    name: string;
+    description: string;
+    language: string;
+    owner: string;
+    ownerImg: string;
+    ownerUrl: string;
+    repoUrl: string;
+}
 
 import './styles.scss'
 
 import { Button } from '../Button'
 
-export function RepositoryItem(props) {
+export function RepositoryItem(props: RepositoryItemProps) {
     return(
         <div className="container-item">
             <div className="informations">

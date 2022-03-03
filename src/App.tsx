@@ -1,3 +1,15 @@
+interface Repository {
+    name: string;
+    description: string;
+    language: string;
+    html_url: string;
+    owner: {
+        login: string;
+        avatar_url: string;
+        html_url: string;
+    }
+}
+
 import { useEffect, useState } from 'react'
 
 import './styles/global.scss'
@@ -15,8 +27,8 @@ import {LogoPrincipal} from './components/LogoPrincipal'
 
 export function App() {
 
-    const [showRepositories, setShowRepositories] = useState([])
-    const [repositories, setRepositories] = useState([])
+    const [showRepositories, setShowRepositories] = useState<Repository[]>([])
+    const [repositories, setRepositories] = useState<Repository[]>([])
     const [search, setSearch] = useState('')
 
     useEffect(()=>{
@@ -34,10 +46,6 @@ export function App() {
         }))
         
     }, [search])
-
-    const handleChange = (e) => {
-        setSearch(e.target.value)
-    }
 
     return(
         <>
@@ -57,7 +65,7 @@ export function App() {
                             className="icons"
                             />
                     </a>
-                    <a href="https://mailto:z3.vit07@gmail.com" target="_blank">
+                    <a href="mailto:z3.vit07@gmail.com" target="_blank">
                         <img 
                             src={IconGmail} 
                             alt="ícone para acessar o gmail do criador!"
@@ -85,7 +93,7 @@ export function App() {
                     type="text" 
                     placeholder="Search a repository..."
                     value={search}
-                    onChange={(e) => handleChange(e)}
+                    onChange={(e) => setSearch(e.target.value)}
                     />
 
                 {
