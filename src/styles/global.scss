@@ -8,4 +8,12 @@ body {
     font: Arial, Helvetica, sans-serif;
     background-color: #171717;
     color: #fff;
+
+    position: relative;
+    min-height: 100vh;
+}
+
+html {
+    min-height: 100vh;
+
 }
