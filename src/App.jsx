@@ -20,11 +20,9 @@ export function App() {
     const [search, setSearch] = useState('')
 
     useEffect(()=>{
-        setTimeout(()=>{
-            fetch('https://api.github.com/users/zevit0r/repos')
-            .then(response => response.json())
-            .then(data => setRepositories(data))
-        }, 4000)
+        fetch('https://api.github.com/users/zevit0r/repos')
+        .then(response => response.json())
+        .then(data => setRepositories(data))
         
         
     }, [])
