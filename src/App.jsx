@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 
 import './styles/global.scss'
-import './styles/header.scss'
+import './styles/stylesApp.scss'
 
 import LogoSecundary from './assets/logo-secundary.svg'
 import IconGithub from './assets/icon-github.svg'
@@ -88,35 +88,45 @@ export function App() {
                     />
 
                 {
-                    search==''
+                    repositories[0]
                     ?
-                    repositories.map( repo =>(
-                        <RepositoryItem
-                            key={repo.name}
-                            name={repo.name}
-                            description={repo.description}
-                            language={repo.language}
-                            owner={repo.owner?.login}
-                            ownerImg={repo.owner?.avatar_url}
-                            ownerUrl={repo.owner?.html_url}
-                            repoUrl={repo.html_url}
-                        />
-                    ))
+                    (
+                        search==''
+                        ?
+                        repositories.map( repo =>(
+                            <RepositoryItem
+                                key={repo.name}
+                                name={repo.name}
+                                description={repo.description}
+                                language={repo.language}
+                                owner={repo.owner?.login}
+                                ownerImg={repo.owner?.avatar_url}
+                                ownerUrl={repo.owner?.html_url}
+                                repoUrl={repo.html_url}
+                            />
+                        ))
+                        :
+                        showRepositories.map( repo =>(
+                            <RepositoryItem
+                                key={repo.name}
+                                name={repo.name}
+                                description={repo.description}
+                                language={repo.language}
+                                owner={repo.owner?.login}
+                                ownerImg={repo.owner?.avatar_url}
+                                ownerUrl={repo.owner?.html_url}
+                                repoUrl={repo.html_url}
+                            />
+                        ))
+                    )
                     :
-                    showRepositories.map( repo =>(
-                        <RepositoryItem
-                            key={repo.name}
-                            name={repo.name}
-                            description={repo.description}
-                            language={repo.language}
-                            owner={repo.owner?.login}
-                            ownerImg={repo.owner?.avatar_url}
-                            ownerUrl={repo.owner?.html_url}
-                            repoUrl={repo.html_url}
-                        />
-                    ))
+                    <img src={Loading} alt="imagem de loading da pagina" className="loading" />
                 }
+                
             </main>
+            <footer>
+                <p>By José Vitor</p>
+            </footer>
         </>
     )
 }
