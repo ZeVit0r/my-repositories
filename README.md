@@ -3,7 +3,7 @@
 </p>
 
 <h1 align="center">
-    🚀 <img src="https://github.com/ZeVit0r/my-repositories/blob/main/imgs/logo-for-readme.svg" />
+  <img src="https://github.com/ZeVit0r/my-repositories/blob/main/imgs/logo-for-readme.svg" />
 </h1>
 
 <p align="center">Tecnologias:</p>
